@@ -11,11 +11,11 @@ nlwValoriza was created in Next Level Week 6 (Together)
 
 - Cadastro de TAG
 
-  [ ] Não é permitido cadastrar mais de uma tag com o mesmo nome
+  [X] Não é permitido cadastrar mais de uma tag com o mesmo nome
   
-  [ ] Não é permitido cadastrar tag sem nome
+  [X] Não é permitido cadastrar tag sem nome
 
-  [ ] Não é permitido cadastrar por usuários não sejam administradores
+  [X] Não é permitido cadastrar por usuários não sejam administradores
 
 - Cadastro de elogios
 
