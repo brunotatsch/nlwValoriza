@@ -19,9 +19,9 @@ nlwValoriza was created in Next Level Week 6 (Together)
 
 - Cadastro de elogios
 
-  [ ] Não é permitido um usuário cadastrar um elogio para si mesmo
+  [X] Não é permitido um usuário cadastrar um elogio para si mesmo
   
-  [ ] Não é permitido cadastrar elogios para usuários 
+  [X] Não é permitido cadastrar elogios para usuários 
   inválidos
 
-  [ ] O usuário precisa estar autenticado na aplicação
+  [X] O usuário precisa estar autenticado na aplicação

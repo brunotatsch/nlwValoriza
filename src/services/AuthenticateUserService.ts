@@ -1,5 +1,5 @@
 import { getCustomRepository } from "typeorm";
-import { UserRepository } from "../repositories/UserRepositories";
+import { UserRepositories } from "../repositories/UserRepositories";
 import { ErrorNlw } from "../utils/ErrorNlw";
 import { compare } from "bcryptjs";
 import { sign } from "jsonwebtoken";
@@ -12,9 +12,9 @@ interface IAuthenticateUserService {
 class AuthenticateUserService {
   async execute({ email, password }: IAuthenticateUserService) {
     // verificar se existe email
-    const userRepository = getCustomRepository(UserRepository);
+    const userRepositories = getCustomRepository(UserRepositories);
 
-    const user = await userRepository.findOne({ email, })
+    const user = await userRepositories.findOne({ email, })
 
     if (!user) {
       throw new ErrorNlw(400, 'Email/Password incorrect');
