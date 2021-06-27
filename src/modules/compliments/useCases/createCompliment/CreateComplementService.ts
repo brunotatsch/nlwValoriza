@@ -1,3 +1,4 @@
+import Mail from "../../../../utils/Mail";
 import { getCustomRepository } from "typeorm";
 import { ErrorNlw } from "../../../../utils/ErrorNlw";
 import { UserRepositories } from "../../../users/infra/typeorm/repositories/UserRepositories";
@@ -25,10 +26,10 @@ class CreateComplimentService {
       throw new ErrorNlw(400, "Incorret User Receiver");
     }
 
-    const userReceiverExists = await userRepositories.findOne(user_receiver_id);
+    const userReceiver = await userRepositories.findOne(user_receiver_id);
 
 
-    if (!userReceiverExists) {
+    if (!userReceiver) {
       throw new ErrorNlw(400, "User receiver does not exists");
     }
 
@@ -38,6 +39,14 @@ class CreateComplimentService {
 
     await complimentsRepositories.save(compliments);
 
+    Mail.to = userReceiver.email;
+
+    Mail.subject = `${userReceiver.name} enviou um elogio para você!`;
+    Mail.message = message;
+    
+    let result = Mail.sendMail();
+    console.log(result);
+    
     return compliments;
   };
 }
