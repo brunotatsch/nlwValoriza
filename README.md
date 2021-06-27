@@ -1,5 +1,10 @@
+# Nome do Projeto 
 # nlw Valoriza
-nlwValoriza was created in Next Level Week 6 (Together)
+
+<h1 align="center">nlwValoriza</h1>
+
+## Descrição do Projeto
+<p align="center">nlwValoriza - Next Level Week 6 (Together)</p>
 
 ## Regras
 

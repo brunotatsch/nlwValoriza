@@ -15,7 +15,7 @@ const listUsersController = new ListUsersController();
 
 console.log("Teste");
 
-userRouters.post("/", ensureAuthenticated, createUserController.handle);
+userRouters.post("/", createUserController.handle);
 userRouters.get("/", ensureAuthenticated, listUsersController.handle);
 userRouters.get("/compliment/receive", ensureAuthenticated, listUserReceiveComplimentsController.handle);
 userRouters.get("/compliment/send", ensureAuthenticated, listUserSendComplimentsController.handle);
