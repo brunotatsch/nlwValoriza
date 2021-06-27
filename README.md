@@ -13,26 +13,51 @@
 ### Testando as API
 
 ## login
-<p align="center">
+
 URL : http://localhost:3000/login
 METODO: POST
 RETORNO: (TOKEN)
-</p>
 
-<p align="center">
-EXEMPLO JSON
+# EXEMPLO JSON
 
 {
 	"email": "nlwvaloriza@outlook.com",
 	"password": "123456"
 }
-<p>
-
-<p align="center">
-EXEMPLO DO RETORNO
+ 
+# EXEMPLO DO RETORNO
 
 "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5sd3ZhbG9yaXphQG91dGxvb2suY29tIiwiaWF0IjoxNjI0NzUzODM5LCJleHAiOjE2MjQ4NDAyMzksInN1YiI6IjNhNjU5YzU5LTcwYjktNDNmZi1iODhjLTlmOWJlZTkwMzRhMSJ9.gbuJ66f3UOsqal3BL-hK9XnAN6DgnXlOJXnkNW19p7w"
-</P>
+
+## List Users
+
+URL : http://localhost:3000/users
+METODO: GET
+RETORNO: JSON
+AUTH: Bearer
+TOKEN: Retorno da API LOGIN
+
+# EXEMPLO DO RETORNO
+
+[
+  {
+    "id": "3a659c59-70b9-43ff-b88c-9f9bee9034a1",
+    "name": "nlwValoriza",
+    "email": "nlwvaloriza@outlook.com",
+    "admin": true,
+    "created_at": "2021-06-27T00:26:01.000Z",
+    "updated_at": "2021-06-27T00:26:01.000Z"
+  },
+  {
+    "id": "d8679258-a9d3-46f8-929a-191d83dd0170",
+    "name": "nlwValoriza no Admin",
+    "email": "nlwvaloriza2@outlook.com",
+    "admin": false,
+    "created_at": "2021-06-27T00:29:53.000Z",
+    "updated_at": "2021-06-27T00:29:53.000Z"
+  }
+]
+
 
 ### Features
 
