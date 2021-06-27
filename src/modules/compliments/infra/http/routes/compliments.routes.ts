@@ -6,6 +6,6 @@ const complimentsRouter = Router();
 
 const createComplimentRepository = new CreateComplimentController();
 
-complimentsRouter.post("/compliments", ensureAuthenticated, createComplimentRepository.handle);
+complimentsRouter.post("/", ensureAuthenticated, createComplimentRepository.handle);
 
 export { complimentsRouter };

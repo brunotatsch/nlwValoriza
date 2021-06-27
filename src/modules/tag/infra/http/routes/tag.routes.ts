@@ -8,7 +8,7 @@ const tagRouter = Router();
 const createTagController = new CreateTagController();
 const listTagsController = new ListTagsController();
 
-tagRouter.post("/tags", ensureAuthenticated, ensureAdmin, createTagController.handle);
-tagRouter.get("/tags", ensureAuthenticated, listTagsController.handle);
+tagRouter.post("/", ensureAuthenticated, ensureAdmin, createTagController.handle);
+tagRouter.get("/", ensureAuthenticated, listTagsController.handle);
 
 export { tagRouter };
