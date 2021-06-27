@@ -5,12 +5,39 @@ nlwValoriza
 # Descrição do Projeto
 nlwValoriza - Next Level Week 6 (Together)
 
+# Sobre
+
+Projeto foi desenvolvido durante o NLW Together, foi um grande passo para mim poder participar e conhecer novas tecnologias. Se tiver duvidas sobre o projeto pode enviar entrar em contato, meus contatos estão na sessão Sobre mim.
+
+# Tabela de conteúdos
+=================
+<!--ts-->
+   * [Sobre](#Sobre)
+   * [Tabela de Conteudo](#tabela-de-conteudo)
+   * [Como usar](#como-usar)
+      * [Login](##Login) 
+      * [List Users](##List-Users) 
+      * [List Tags](##List-Tags) 
+      * [List Compliments by Sender](##List-Compliments-by-Sender) 
+      * [List Compliments by Receiver](##List-Compliments-by-Receiver) 
+      * [Create User](##Create-User) 
+      * [Create Tag](##Create-Tag) 
+      * [Create Compliments](##Create-Compliments) 
+   * [Testes](#testes)
+   * [Features](#Features)
+   * [Regras](#Regras)
+   * [Sobre mim](#Sobre-mim)
+
+<!--te-->
+
+
+
 # Como usar 
 
 Use `git clone` para copiar o projeto depois abra a pasta do projeto e rode o comando `yarn` para instalar os pacotes, após esta execução rodar o `yarn dev`
 
 
-# Testando as API
+# testes
 
 ## Login
 ```
@@ -263,7 +290,7 @@ TOKEN: Retorno da API LOGIN
 }
 ``` 
 
-### Features
+# Features
 
   [X] Cadastro de Usuário
 
@@ -271,7 +298,7 @@ TOKEN: Retorno da API LOGIN
 
   [X] Envio de elogios
 
-### Regras
+# Regras
 
 - Cadastro de usuários
 
@@ -296,7 +323,7 @@ TOKEN: Retorno da API LOGIN
 
   [X] O usuário precisa estar autenticado na aplicação
 
-
+# Sobre mim
 <h1 align="center">Bruno Tatsch</h1>
 
 <p align="center">Software Developer</p>
