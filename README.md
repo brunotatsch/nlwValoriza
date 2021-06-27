@@ -1,44 +1,45 @@
-### Projeto
+# Projeto
 
-<p align="center">nlwValoriza</p>
+nlwValoriza
 
-### Descrição do Projeto
-<p align="center">nlwValoriza - Next Level Week 6 (Together)</p>
+# Descrição do Projeto
+nlwValoriza - Next Level Week 6 (Together)
 
-### Como usar 
+# Como usar 
 
-<p align="center">Fazer o git clone do projeto, abra a pasta do projeto, dentro da pasta rode o comando yarn para instalar os pacotes, após esta execução rodar o yarn dev.</p>
+Use `git clone` para copiar o projeto depois abra a pasta do projeto e rode o comando `yarn` para instalar os pacotes, após esta execução rodar o `yarn dev`
 
 
-### Testando as API
+# Testando as API
 
 ## login
-
+```
 URL : http://localhost:3000/login
 METODO: POST
 RETORNO: (TOKEN)
+```
 
-# EXEMPLO JSON
-
+### EXEMPLO JSON
+```
 {
 	"email": "nlwvaloriza@outlook.com",
 	"password": "123456"
 }
- 
-# EXEMPLO DO RETORNO
-
+``` 
+### EXEMPLO DO RETORNO
+```
 "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5sd3ZhbG9yaXphQG91dGxvb2suY29tIiwiaWF0IjoxNjI0NzUzODM5LCJleHAiOjE2MjQ4NDAyMzksInN1YiI6IjNhNjU5YzU5LTcwYjktNDNmZi1iODhjLTlmOWJlZTkwMzRhMSJ9.gbuJ66f3UOsqal3BL-hK9XnAN6DgnXlOJXnkNW19p7w"
-
+```
 ## List Users
-
+```
 URL : http://localhost:3000/users
 METODO: GET
 RETORNO: JSON
 AUTH: Bearer
 TOKEN: Retorno da API LOGIN
-
-# EXEMPLO DO RETORNO
-
+```
+### EXEMPLO DO RETORNO
+```
 [
   {
     "id": "3a659c59-70b9-43ff-b88c-9f9bee9034a1",
@@ -57,7 +58,7 @@ TOKEN: Retorno da API LOGIN
     "updated_at": "2021-06-27T00:29:53.000Z"
   }
 ]
-
+```
 
 ### Features
 
