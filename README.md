@@ -12,7 +12,7 @@ Use `git clone` para copiar o projeto depois abra a pasta do projeto e rode o co
 
 # Testando as API
 
-## login
+## Login
 ```
 URL : http://localhost:3000/login
 METODO: POST
@@ -30,6 +30,7 @@ RETORNO: (TOKEN)
 ```
 "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5sd3ZhbG9yaXphQG91dGxvb2suY29tIiwiaWF0IjoxNjI0NzUzODM5LCJleHAiOjE2MjQ4NDAyMzksInN1YiI6IjNhNjU5YzU5LTcwYjktNDNmZi1iODhjLTlmOWJlZTkwMzRhMSJ9.gbuJ66f3UOsqal3BL-hK9XnAN6DgnXlOJXnkNW19p7w"
 ```
+
 ## List Users
 ```
 URL : http://localhost:3000/users
@@ -59,6 +60,208 @@ TOKEN: Retorno da API LOGIN
   }
 ]
 ```
+## List Tags
+```
+URL : http://localhost:3000/tags
+METODO: GET
+RETORNO: JSON
+AUTH: Bearer
+TOKEN: Retorno da API LOGIN
+```
+### EXEMPLO DO RETORNO
+```
+[
+  {
+    "id": "098c5ec8-380c-4925-b4b6-5c4578edfc1e",
+    "name": "Ajudante master",
+    "created_at": "2021-06-27T00:30:51.000Z",
+    "updated_at": "2021-06-27T00:30:51.000Z",
+    "name_custom": "#Ajudante master"
+  }
+]
+```
+
+## List Compliments by Sender
+```
+Retorna todos os elogios enviados
+
+URL : http://localhost:3000/users/compliment/send
+METODO: GET
+RETORNO: JSON
+AUTH: Bearer
+TOKEN: Retorno da API LOGIN
+```
+### EXEMPLO DO RETORNO
+```
+  {
+    "id": "e06b6b6b-6f95-4943-978e-f7d9a8a94f00",
+    "user_sender_id": "aa7c1a55-b20c-466d-887a-bd5bc2e078fd",
+    "user_receiver_id": "17abef24-50cb-4fa0-b22e-4261c9f67a62",
+    "tag_id": "0fdb71e1-9130-4400-9c4e-d091724709e7",
+    "message": "Muito bem",
+    "created_at": "2021-06-24T00:51:04.000Z",
+    "user_sender": {
+      "id": "aa7c1a55-b20c-466d-887a-bd5bc2e078fd",
+      "name": "Lider",
+      "email": "lider@123.com.br",
+      "admin": true,
+      "password": "$2a$08$s.Lh6o2gBj5twa87IqZvluHUPhH5vmnEro/uXqTsefgh0bmL42mm6",
+      "created_at": "2021-06-23T23:36:08.000Z",
+      "updated_at": "2021-06-23T23:36:08.000Z"
+    },
+    "user_receiver": {
+      "id": "17abef24-50cb-4fa0-b22e-4261c9f67a62",
+      "name": "Funcionario",
+      "email": "func@123.com.br",
+      "admin": false,
+      "password": "$2a$08$ctEoXCkSNVbOe7YTar4GxOMhVL2mYIGD/FMftQTzv9AyrhhfFMQEK",
+      "created_at": "2021-06-24T00:49:34.000Z",
+      "updated_at": "2021-06-24T00:49:34.000Z"
+    },
+    "tag": {
+      "id": "0fdb71e1-9130-4400-9c4e-d091724709e7",
+      "name": "Liderança",
+      "created_at": "2021-06-23T00:43:18.000Z",
+      "updated_at": "2021-06-23T00:43:18.000Z"
+    }
+  }
+```
+## List Compliments by Receiver
+```
+Retorna todos os elogios recebidos
+
+URL : http://localhost:3000/users/compliment/receive
+METODO: GET
+RETORNO: JSON
+AUTH: Bearer
+TOKEN: Retorno da API LOGIN
+```
+### EXEMPLO DO RETORNO
+```
+ [
+  {
+    "id": "df395aa2-f50c-42cc-b466-1223d11245e3",
+    "user_sender_id": "d8679258-a9d3-46f8-929a-191d83dd0170",
+    "user_receiver_id": "3a659c59-70b9-43ff-b88c-9f9bee9034a1",
+    "tag_id": "098c5ec8-380c-4925-b4b6-5c4578edfc1e",
+    "message": "Muito obrigado pela ajuda",
+    "created_at": "2021-06-27T00:32:21.000Z",
+    "user_sender": {
+      "id": "d8679258-a9d3-46f8-929a-191d83dd0170",
+      "name": "nlwValoriza no Admin",
+      "email": "nlwvaloriza2@outlook.com",
+      "admin": false,
+      "password": "$2a$08$fJzQezOlQVXh9DDJPPxGUO.6J0eDQPO.AXx0XGWCTj0xgep5whi8q",
+      "created_at": "2021-06-27T00:29:53.000Z",
+      "updated_at": "2021-06-27T00:29:53.000Z"
+    },
+    "user_receiver": {
+      "id": "3a659c59-70b9-43ff-b88c-9f9bee9034a1",
+      "name": "nlwValoriza",
+      "email": "nlwvaloriza@outlook.com",
+      "admin": true,
+      "password": "$2a$08$OItTpqOno2qooQssi6SGweHggNmmb/nPJW1hzrBLEuUNeiBtEanXq",
+      "created_at": "2021-06-27T00:26:01.000Z",
+      "updated_at": "2021-06-27T00:26:01.000Z"
+    },
+    "tag": {
+      "id": "098c5ec8-380c-4925-b4b6-5c4578edfc1e",
+      "name": "Ajudante master",
+      "created_at": "2021-06-27T00:30:51.000Z",
+      "updated_at": "2021-06-27T00:30:51.000Z"
+    }
+  }
+]
+```
+## Create User
+```
+URL : http://localhost:3000/users
+METODO: POST
+RETORNO: JSON
+AUTH: Bearer
+TOKEN: Retorno da API LOGIN
+```
+
+### EXEMPLO JSON
+```
+{
+	"name": "nlwValoriza",
+	"email": "nlwvaloriza@outlook.com",
+	"password": "123456",
+  "admin": true
+}
+```
+
+### EXEMPLO DE RETORNO
+``` 
+{
+  "id": "d8679258-a9d3-46f8-929a-191d83dd0170",
+  "name": "nlwValoriza no Admin",
+  "email": "nlwvaloriza2@outlook.com",
+  "admin": false,
+  "password": "$2a$08$fJzQezOlQVXh9DDJPPxGUO.6J0eDQPO.AXx0XGWCTj0xgep5whi8q",
+  "created_at": "2021-06-27T00:29:53.000Z",
+  "updated_at": "2021-06-27T00:29:53.000Z"
+}
+``` 
+
+## Create Tag
+
+```
+Cria elogio no sistema, somentes usuários admin podem criar.
+
+URL : http://localhost:3000/tags
+METODO: POST
+RETORNO: JSON
+AUTH: Bearer
+TOKEN: Retorno da API LOGIN
+```
+
+### EXEMPLO JSON
+```
+{
+	"name": "Ajudante master"
+}
+``` 
+### EXEMPLO RETORNO
+{
+  "id": "098c5ec8-380c-4925-b4b6-5c4578edfc1e",
+  "name": "Ajudante master",
+  "created_at": "2021-06-27T00:30:51.000Z",
+  "updated_at": "2021-06-27T00:30:51.000Z"
+}
+
+## Create Compliments
+
+```
+Envia um elogio
+
+URL : http://localhost:3000/compliments
+METODO: POST
+RETORNO: JSON
+AUTH: Bearer
+TOKEN: Retorno da API LOGIN
+```
+
+### EXEMPLO JSON
+```
+{
+	"user_receiver_id": "3a659c59-70b9-43ff-b88c-9f9bee9034a1", 
+	"tag_id": "098c5ec8-380c-4925-b4b6-5c4578edfc1e", 
+	"message": "Muito obrigado pela ajuda"
+}
+``` 
+### EXEMPLO DE RETORNO
+``` 
+{
+  "id": "df395aa2-f50c-42cc-b466-1223d11245e3",
+  "user_sender_id": "d8679258-a9d3-46f8-929a-191d83dd0170",
+  "user_receiver_id": "3a659c59-70b9-43ff-b88c-9f9bee9034a1",
+  "tag_id": "098c5ec8-380c-4925-b4b6-5c4578edfc1e",
+  "message": "Muito obrigado pela ajuda",
+  "created_at": "2021-06-27T00:32:21.000Z"
+}
+``` 
 
 ### Features
 
